@@ -1,5 +1,4 @@
 loadstring(game:HttpGet('https://gitfront.io/r/ReQiuYTPL/wFUydaK74uGx/hub/raw/ReQiuYTPLHub.lua'))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/qweaad1/qwe/main/NEWlevel1"))()
 -- Создаем экранное GUI
 local gui1 = Instance.new("ScreenGui")
 gui1.Parent = game.Players.LocalPlayer.PlayerGui
