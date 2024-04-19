@@ -5,7 +5,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/
 -- i don't understand why you would want to crack this if anything if your gonna crack it force the getgenv().KeySystem false and it will force load the script
 end
 local StartTime = tick()
-local A = loadstring(game:HttpGet("https://raw.githubusercontent.com/qweaad1/qwe/main/NEWlevel2"))()
+local A = loadstring(game:HttpGet("https://raw.githubusercontent.com/qweaad1/TradeaModeQwe/main/API2"))()
 
 local BlurEffect = Instance.new("BlurEffect")
 BlurEffect.Parent = Lighting
