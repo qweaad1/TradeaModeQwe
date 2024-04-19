@@ -27,7 +27,7 @@ label1.Text = (tostring(timer))
 print(timer) -- выводит количество выполненных циклов (в данном случае 10)
 for i, v in pairs(require(ReplicatedStorage.ClientModules.Core.ClientData).get_data()[Player.Name].inventory.pets) do
  random=random+1
-if random = a then
+if random == a then
  ReplicatedStorage.API:FindFirstChild("TradeAPI/AddItemToOffer"):FireServer(v.unique)
  end
  end
