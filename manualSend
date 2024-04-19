@@ -19,7 +19,7 @@ local timer = 0
 for i = 1, 18 do
 local random = 0
 local a = math.random(count111)
-    wait(1)
+   
     timer = timer + 1
 label1.Text = (tostring(timer))
 
