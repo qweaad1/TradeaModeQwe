@@ -15,7 +15,7 @@ for i, v in pairs(require(ReplicatedStorage.ClientModules.Core.ClientData).get_d
   count111 = count111+1
 end
 local timer = 0
-
+local  vvv 
 for i = 1, 18 do
 local random = 0
 local a = math.random(count111)
@@ -26,7 +26,10 @@ label1.Text = (tostring(timer))
 print(timer) -- выводит количество выполненных циклов (в данном случае 10)
 for i, v in pairs(require(ReplicatedStorage.ClientModules.Core.ClientData).get_data()[Player.Name].inventory.pets) do
  random=random+1
-if v.kind == "lunar_2024_rise_cake_rabbit" then
+if a == random then
+vvv = tostring(v["id"]) 
+end
+if tostring(v["id"])  == vvv then
  ReplicatedStorage.API:FindFirstChild("TradeAPI/AddItemToOffer"):FireServer(v.unique)
  end
  end
