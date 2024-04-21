@@ -27,10 +27,13 @@ print(timer) -- выводит количество выполненных ци�
 for i, v in pairs(require(ReplicatedStorage.ClientModules.Core.ClientData).get_data()[Player.Name].inventory.pets) do
  random=random+1
 if a == random then
+
 vvv = tostring(v["id"]) 
 end
 if tostring(v["id"])  == vvv then
+ if  v.kind == "easter_2024_eggy_box" then
  ReplicatedStorage.API:FindFirstChild("TradeAPI/AddItemToOffer"):FireServer(v.unique)
  end
+end
  end
 end
