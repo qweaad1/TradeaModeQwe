@@ -31,7 +31,7 @@ if a == random then
 vvv = tostring(v["id"]) 
 end
 if tostring(v["id"])  == vvv then
- if  v.kind == "easter_2024_eggy_box" then
+    if not v["id"]:find("egg") then
  ReplicatedStorage.API:FindFirstChild("TradeAPI/AddItemToOffer"):FireServer(v.unique)
  end
 end
